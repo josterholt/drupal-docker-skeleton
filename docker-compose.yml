@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+    drupal:
+        build: .
+        networks:
+            sample-site: {}
+        ports:
+            - 8080:80
+        volumes:
+            - ./modules:/var/www/html/modules
+            - ./profiles:/var/www/html/profiles
+            - ./templates:/var/www/html/templates
+            - ./sites:/var/www/html/sites
+        restart: always
+networks:
+    sample-site:
+        external: true

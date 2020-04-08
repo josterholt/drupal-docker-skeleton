@@ -12,6 +12,7 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" &&
 	mv composer.phar /usr/local/bin/composer && \
 	php -r "unlink('composer-setup.php');"
 
+RUN rm composer.lock
 COPY composer.json composer.json
 RUN cat composer.json
 RUN composer install

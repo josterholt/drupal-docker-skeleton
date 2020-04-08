@@ -12,10 +12,14 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" &&
 	mv composer.phar /usr/local/bin/composer && \
 	php -r "unlink('composer-setup.php');"
 
-RUN composer require drush/drush
+COPY composer.json composer.json
+RUN cat composer.json
+RUN composer install
+#RUN composer require drush/drush
 
 RUN wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/latest/download/drush.phar
 RUN mv drush.phar /usr/local/bin/drush
+RUN chmod +x /usr/local/bin/drush
 
 # Remove Drupal instance that comes with image
 #RUN rm -rf /var/www/html/*

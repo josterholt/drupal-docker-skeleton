@@ -1,1 +1,1 @@
-Placeholder
+Skeleton build of Drupal in a Docker image.

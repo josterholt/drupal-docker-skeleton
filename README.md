@@ -6,5 +6,3 @@
 
 Copy `default.settings.php` to `settings.php`
 Copy `development.services.yml` to `services.yml`
-
-(Optional)

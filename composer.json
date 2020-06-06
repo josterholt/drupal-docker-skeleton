@@ -16,11 +16,11 @@
     ],
     "require": {
         "composer/installers": "^1.2",
-        "drupal/core-composer-scaffold": "^8.8",
-        "drupal/core-project-message": "^8.8",
-        "drupal/core-recommended": "^8.8",
-        "drupal/core-vendor-hardening": "^8.8",
-        "drush/drush": "^10.2"
+        "drupal/core-composer-scaffold": "^9.0.0",
+        "drupal/core-project-message": "^9.0.0",
+        "drupal/core-recommended": "^9.0.0",
+        "drupal/core-vendor-hardening": "^9.0.0",
+        "drush/drush": "^10.2.2"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -34,7 +34,7 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "./"
-          }
+            }
         },
         "installer-paths": {
             "core": [
@@ -46,7 +46,7 @@
             "modules/contrib/{$name}": [
                 "type:drupal-module"
             ],
-          "profiles/contrib/{$name}": [
+            "profiles/contrib/{$name}": [
                 "type:drupal-profile"
             ],
             "themes/contrib/{$name}": [
@@ -58,7 +58,7 @@
             "modules/custom/{$name}": [
                 "type:drupal-custom-module"
             ],
-           "themes/custom/{$name}": [
+            "themes/custom/{$name}": [
                 "type:drupal-custom-theme"
             ]
         },
@@ -82,6 +82,6 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
-       }
+        }
     }
 }
